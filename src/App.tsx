@@ -4,7 +4,7 @@ import "./App.scss";
 const App: React.FC = () => {
   return (
     <div>
-      <h1>Testing</h1>
+      <audio controls src="/sounds/price-is-wrong.mp3" />
     </div>
   );
 };
