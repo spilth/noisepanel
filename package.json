@@ -46,7 +46,8 @@
     "test": "react-scripts test",
     "test:coverage": "react-scripts test --env=jsdom --coverage",
     "eject": "react-scripts eject",
-    "heroku-postbuild": "npm-run-all build"
+    "heroku-postbuild": "npm-run-all build",
+    "deploy": "yarn build && netlify deploy --prod --dir=build"
   },
   "lint-staged": {
     "src/**/*.{js,jsx}": "eslint",
