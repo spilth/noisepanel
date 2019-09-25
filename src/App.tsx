@@ -5,7 +5,7 @@ import SoundEffect from "./components/SoundEffect/SoundEffect";
 const App: React.FC = () => {
   return (
     <div className="sound-effects">
-      <SoundEffect name="B17 Bomber" path="/sounds/b17-bomper.mp3" />
+      <SoundEffect name="B17 Bomber" path="/sounds/b17-bomber.mp3" />
       <SoundEffect name="Ba Dum Dum Tss" path="/sounds/ba-dum-tss.mp3" />
       <SoundEffect name="Bat Signal" path="/sounds/bat-signal.mp3" />
       <SoundEffect name="Bored Bored Bored" path="/sounds/b-b-b-bored.mp3" />
