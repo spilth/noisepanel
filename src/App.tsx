@@ -1,15 +1,26 @@
-import React, { FC } from "react";
+import React, { FC, useRef } from "react";
 import "./App.scss";
 
 interface SoundEffectProps {
   name: string;
   path: string;
-};
+}
 const SoundEffect: FC<SoundEffectProps> = props => {
+  const audioElement = useRef(null);
+
+  const playAudio = () => {
+    if (audioElement !== null) {
+      const current = audioElement.current;
+      if (current !== null) {
+        audioElement.current.play();
+      }
+    }
+  };
+
   return (
     <div>
-      <h2>{props.name}</h2>
-      <audio controls src={props.path} />
+      <button onClick={playAudio}>{props.name}</button>
+      <audio src={props.path} ref={audioElement} />
     </div>
   );
 };
