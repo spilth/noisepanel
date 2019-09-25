@@ -1,4 +1,4 @@
-import React, { FC, useRef } from "react";
+import React from "react";
 import "./App.scss";
 import SoundEffect from "./components/SoundEffect/SoundEffect";
 
