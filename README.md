@@ -1,4 +1,4 @@
-# soundboard-react-typescript
+# noisepanel.io
 
 This is a React 16 app.
 
