@@ -1,0 +1,21 @@
+.sound-effect__button {
+  width: 192px;
+  height: 64px;
+  margin: 8px;
+  background: #090;
+  border-radius: 8px;
+  border: 1px solid #18ab29;
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+
+  &:hover {
+    background: #0a0;
+  }
+
+  &:active {
+    background: #0c0;
+    position: relative;
+    top: 1px;
+  }
+}
