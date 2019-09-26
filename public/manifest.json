@@ -1,6 +1,6 @@
 {
-  "short_name": "soundboard-react-typescript",
-  "name": "soundboard-react-typescript",
+  "short_name": "noisepanel",
+  "name": "noisepanel.io",
   "icons": [
     {
       "src": "favicon.ico",
