@@ -77,6 +77,7 @@ const App: React.FC = () => {
         name="Stranger Things Theme"
         path="/sounds/stranger-things.mp3"
       />
+      <SoundEffect name="TED Talk Intro" path="/sounds/ted-talk-intro.mp3" />
       <SoundEffect name="Thunder" path="/sounds/thunder.mp3" />
       <SoundEffect name="THX" path="/sounds/thx.mp3" />
       <SoundEffect
