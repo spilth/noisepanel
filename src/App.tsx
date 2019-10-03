@@ -49,6 +49,7 @@ const App: React.FC = () => {
         name="Jeopardy Countdown"
         path="/sounds/jeopardy-countdown.mp3"
       />
+      <SoundEffect name="Law & Order" path="/sounds/law-and-order.mp3" />
       <SoundEffect name="LOST" path="/sounds/lost-suspense.mp3" />
       <SoundEffect name="Mario's Death" path="/sounds/mario-death.mp3" />
       <SoundEffect
