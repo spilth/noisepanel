@@ -22,19 +22,7 @@ const SoundEffect: FC<SoundEffectProps> = props => {
       }
     }
   };
-
-  const pauseAudio = () => {
-    if (audioElement !== null) {
-      const current: HTMLAudioElement =
-        audioElement.current || new HTMLAudioElement();
-
-      if (current !== null) {
-        current.pause();
-        setPlaying(false);
-      }
-    }
-  };
-
+  
   const stopAudio = () => {
     if (audioElement !== null) {
       const current: HTMLAudioElement =
