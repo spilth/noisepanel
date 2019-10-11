@@ -71,7 +71,7 @@ const App: React.FC = () => {
   return (
     <div className="sound-effects">
       {sounds.map(sound => (
-        <SoundEffect name={sound.name} path={sound.path} />
+        <SoundEffect key={sound.path} name={sound.name} path={sound.path} />
       ))}
     </div>
   );
