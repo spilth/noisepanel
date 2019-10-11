@@ -1,18 +1,20 @@
 .sound-effect {
-  width: 156px;
+  width: 132px;
   height: 64px;
-  margin: 8px;
-  padding: 8px;
-  font-family: sans-serif;
-  font-size: 14px;
+  margin: 4px;
+  padding: 16px;
+  border-radius: 4px;
+  font-size: 18px;
   font-weight: bold;
-  border: 1px solid #aaa;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  cursor: pointer;
+  background: #9bc53d;
+  box-shadow: 0 0 8px #999;
 }
 
-.sound-effect__button {
-  font-size: 16px;
-  padding: 4px;
+.sound-effect:hover {
+  box-shadow: 0 0 8px #000;
+}
+
+.sound-effect__playing {
+  background: #e55934;
 }

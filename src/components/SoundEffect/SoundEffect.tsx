@@ -1,4 +1,5 @@
 import React, { FC, useRef, useState } from "react";
+import classNames from "classnames";
 
 import "./SoundEffect.scss";
 
@@ -11,26 +12,19 @@ const SoundEffect: FC<SoundEffectProps> = props => {
   const audioElement = useRef(null);
   const [playing, setPlaying] = useState(false);
 
-  const playAudio = () => {
+  const toggleAudio = () => {
     if (audioElement !== null) {
       const current: HTMLAudioElement =
         audioElement.current || new HTMLAudioElement();
 
       if (current !== null) {
-        current.play().then(() => {});
-        setPlaying(true);
-      }
-    }
-  };
-  
-  const stopAudio = () => {
-    if (audioElement !== null) {
-      const current: HTMLAudioElement =
-        audioElement.current || new HTMLAudioElement();
-
-      if (current !== null) {
-        current.load();
-        setPlaying(false);
+        if (playing) {
+          current.load();
+          setPlaying(false);
+        } else {
+          current.play().then(() => {});
+          setPlaying(true);
+        }
       }
     }
   };
@@ -40,20 +34,13 @@ const SoundEffect: FC<SoundEffectProps> = props => {
   };
 
   return (
-    <div className="sound-effect">
+    <div
+      className={classNames("sound-effect", {
+        "sound-effect__playing": playing
+      })}
+      onClick={toggleAudio}
+    >
       <p>{props.name}</p>
-      <p>
-        {!playing && (
-          <button className="sound-effect__button" onClick={playAudio}>
-            <i className="fas fa-play"></i>
-          </button>
-        )}
-        {playing && (
-          <button className="sound-effect__button" onClick={stopAudio}>
-            <i className="fas fa-stop"></i>
-          </button>
-        )}
-      </p>
 
       <audio src={props.path} ref={audioElement} onEnded={audioFinished} />
     </div>
