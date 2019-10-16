@@ -1,8 +1,56 @@
 @import "./theme/colors.scss";
 @import "./theme/typography.scss";
 
+.sound-effects__header {
+  position: fixed;
+  top: 0;
+  background: $black;
+  width: 100%;
+  text-align: center;
+  height: 24px;
+  padding: 8px;
+}
+
 .sound-effects {
-  margin: 4px;
+  margin: 44px 4px 4px 4px;
   display: flex;
   flex-wrap: wrap;
+}
+
+.sound-effects__volume__label {
+  color: $white;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.sound-effects__volume__slider {
+  appearance: none;
+  width: 50%;
+  height: 12px;
+  border-radius: 6px;
+  background: $gray;
+  outline: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.sound-effects__volume__slider:hover {
+  opacity: 1;
+}
+
+.sound-effects__volume__slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: $blue-jeans;
+  cursor: pointer;
+}
+
+.sound-effects__volume__slider::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: $blue-jeans;
+  cursor: pointer;
 }

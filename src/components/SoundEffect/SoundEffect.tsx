@@ -1,4 +1,4 @@
-import React, { FC, useRef, useState } from "react";
+import React, { FC, useEffect, useRef, useState } from "react";
 import classNames from "classnames";
 
 import "./SoundEffect.scss";
@@ -6,31 +6,30 @@ import "./SoundEffect.scss";
 interface SoundEffectProps {
   name: string;
   path: string;
+  volume: number;
 }
 
-const SoundEffect: FC<SoundEffectProps> = props => {
+const SoundEffect: FC<SoundEffectProps> = ({ name, path, volume }) => {
   const audioElement = useRef(null);
   const [playing, setPlaying] = useState(false);
 
-  const toggleAudio = () => {
-    if (audioElement !== null) {
-      const current: HTMLAudioElement =
-        audioElement.current || new HTMLAudioElement();
+  useEffect(() => {
+    const current: HTMLAudioElement =
+      audioElement.current || new HTMLAudioElement();
+    current.volume = volume;
+  });
 
-      if (current !== null) {
-        if (playing) {
-          current.load();
-          setPlaying(false);
-        } else {
-          current.play().then(() => {});
-          setPlaying(true);
-        }
-      }
+  const togglePlaying = () => {
+    const current: HTMLAudioElement =
+      audioElement.current || new HTMLAudioElement();
+
+    if (playing) {
+      current.load();
+      setPlaying(false);
+    } else {
+      current.play().then(() => {});
+      setPlaying(true);
     }
-  };
-
-  const audioFinished = () => {
-    setPlaying(false);
   };
 
   return (
@@ -38,11 +37,10 @@ const SoundEffect: FC<SoundEffectProps> = props => {
       className={classNames("sound-effect", {
         "sound-effect__playing": playing
       })}
-      onClick={toggleAudio}
+      onClick={togglePlaying}
     >
-      <p>{props.name}</p>
-
-      <audio src={props.path} ref={audioElement} onEnded={audioFinished} />
+      <p>{name}</p>
+      <audio src={path} ref={audioElement} onEnded={() => setPlaying(false)} />
     </div>
   );
 };

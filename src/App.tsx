@@ -1,8 +1,9 @@
-import React from "react";
+import React, { FC, useState } from "react";
 import "./App.scss";
 import SoundEffect from "./components/SoundEffect/SoundEffect";
 
-const App: React.FC = () => {
+const App: FC = () => {
+  const [volume, setVolume] = useState(1);
   const sounds = [
     { name: "Applause", path: "/sounds/applause.mp3" },
     { name: "B17 Bomber", path: "/sounds/b17-bomber.mp3" },
@@ -69,10 +70,27 @@ const App: React.FC = () => {
   ];
 
   return (
-    <div className="sound-effects">
-      {sounds.map(sound => (
-        <SoundEffect key={sound.path} name={sound.name} path={sound.path} />
-      ))}
+    <div>
+      <div className="sound-effects__header">
+        <label className="sound-effects__volume__label">Volume</label>
+        <input
+          className="sound-effects__volume__slider"
+          type="range"
+          min={0}
+          max={1}
+          step={0.01}
+          value={volume}
+          onChange={({ target: { value } }) =>
+            setVolume(Number.parseFloat(value))
+          }
+        />
+      </div>
+
+      <div className="sound-effects">
+        {sounds.map(({ name, path }) => (
+          <SoundEffect key={path} name={name} path={path} volume={volume} />
+        ))}
+      </div>
     </div>
   );
 };
