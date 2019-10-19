@@ -9,6 +9,7 @@ const App: FC = () => {
     { name: "B17 Bomber", path: "/sounds/b17-bomber.mp3" },
     { name: "Ba Dum Dum Tss", path: "/sounds/ba-dum-tss.mp3" },
     { name: "Bat Signal", path: "/sounds/bat-signal.mp3" },
+    { name: "Bixby Snider", path: "/sounds/bixby-snider.mp3" },
     { name: "Bored Bored Bored", path: "/sounds/b-b-b-bored.mp3" },
     { name: "Canned Laughter", path: "/sounds/canned-laughter.mp3" },
     { name: "Captain Refactor", path: "/sounds/captain-refactor.mp3" },
