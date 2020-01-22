@@ -68,6 +68,7 @@ const App: FC = () => {
     { name: "Wilhelm Scream", path: "/sounds/wilhelm.mp3" },
     { name: "Yakety Sax", path: "/sounds/yakety-sax.mp3" },
     { name: "Yes!", path: "/sounds/yes.mp3" },
+    { name: "You get nothing!", path: "/sounds/you-get-nothing.mp3" },
     { name: "You're the man now, dog!", path: "/sounds/ytmnd.mp3" }
   ];
 
