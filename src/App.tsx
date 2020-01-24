@@ -60,6 +60,7 @@ const App: FC = () => {
     { name: "TED Talk Intro", path: "/sounds/ted-talk-intro.mp3" },
     { name: "Thunder", path: "/sounds/thunder.mp3" },
     { name: "THX", path: "/sounds/thx.mp3" },
+    { name: "Untitled Goose Sound", path: "/sounds/honk.mp3" },
     { name: "What a Concept", path: "/sounds/yup-what-a-concept.mp3" },
     {
       name: "Where did you learn to fly?",
