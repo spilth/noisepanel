@@ -36,6 +36,7 @@ const App: FC = () => {
     { name: "Jaws Theme", path: "/sounds/jaws.mp3" },
     { name: "Jeopardy Countdown", path: "/sounds/jeopardy-countdown.mp3" },
     { name: "King Harkinian: Dinner", path: "/sounds/king-harkinian-dinner.mp3" },
+    { name: "Lawwwwww!", path: "/sounds/lawww.mp3" },
     { name: "Law & Order", path: "/sounds/law-and-order.mp3" },
     { name: "LOST", path: "/sounds/lost-suspense.mp3" },
     { name: "Mario's Death", path: "/sounds/mario-death.mp3" },
