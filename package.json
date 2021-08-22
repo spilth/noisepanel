@@ -54,8 +54,8 @@
     "src/**/*.scss": "stylelint"
   },
   "engines": {
-    "node": "11.14.0",
-    "yarn": ">=1.17.0"
+    "node": "14.17.5",
+    "yarn": ">=1.22.11"
   },
   "jest": {
     "collectCoverageFrom": [
